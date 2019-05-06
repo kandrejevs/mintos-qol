@@ -1,0 +1,18 @@
+{
+  "name": "mintos-scraper",
+  "version": "1.0.0",
+  "description": "pupeteer scraper for fetching statistics for pwa",
+  "main": "index.js",
+  "scripts": {
+    "cron": "node index.js"
+  },
+  "author": "kandrejevs",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "index.js": "0.0.3",
+    "node": "^11.10.0",
+    "node-cron": "^2.0.3",
+    "puppeteer": "^1.15.0"
+  }
+}
