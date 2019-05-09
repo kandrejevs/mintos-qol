@@ -13,4 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::resource('balances', 'BalanceController')->only(['store']);
+Route::middleware('auth:api')
+    ->group(function () {
+        Route::resource('balances', 'BalanceController')->only(['store']);
+        Route::get('data', 'DataController@index');
+    });
+
+Route::post('login', 'ApiLoginController@login');

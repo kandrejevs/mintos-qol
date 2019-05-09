@@ -44,7 +44,7 @@ async function fetch() {
         data[key] = sanitize(data[key]);
     });
 
-    axios.post('http://nginx/api/balances', data)
+    axios.post(`http://nginx/api/balances?api_token=${process.env.USER_API_TOKEN}`, data)
         .then(function (response) {
             console.log(response);
         })
