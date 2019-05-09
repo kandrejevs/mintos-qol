@@ -31,7 +31,7 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
       - "traefik.port=80"
-      - "traefik.frontend.rule=Host:api.mintos-qol.localhost"
+      - "traefik.frontend.rule=Host:${APP_HOST}"
     networks:
       - default
       - traefik
@@ -87,7 +87,7 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
       - "traefik.port=80"
-      - "traefik.frontend.rule=Host:mintos-qol.localhost"
+      - "traefik.frontend.rule=Host:${PWA_HOST}"
     networks:
       - default
       - traefik
