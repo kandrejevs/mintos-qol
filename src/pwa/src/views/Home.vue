@@ -153,6 +153,7 @@
         </div>
 
         <p>Last update: {{ data.last_update }}</p>
+        <button @click="fetchData">Refresh</button>
     </div>
 </template>
 
@@ -165,14 +166,16 @@
             }
         },
         mounted: function () {
-            this.axios.get(`/api/data`)
-                .then((response) => {
-                    this.data = response.data;
-                })
-                .catch(() => {
-                })
-                .then(() => {
-                });
+            this.fetchData();
+        },
+        methods: {
+            fetchData() {
+                this.axios
+                    .get(`/api/data`)
+                    .then((response) => {
+                        this.data = response.data;
+                    })
+            }
         }
     }
 </script>
