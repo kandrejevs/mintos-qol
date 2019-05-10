@@ -1,6 +1,6 @@
-#Mintos.com Quality of Life application
+# Mintos.com Quality of Life application
 
-##Motivation
+## Motivation
 **Problem:**
 Mintos.com does not provide API and their session policy is very short. If you want to quickly check latest earnings 
 and account balance, you have to open browser, go to their website, log in and only then you will be able to see info 
@@ -12,7 +12,7 @@ app via POST request. Vue.js PWA app then uses laravel as data source and it can
 native app. Sessions persist much longer, so you are able to just click icon on your phone screen and quickly see how 
 your portfolio is doing.
 
-##Installation
+## Installation
 The whole application is dockerized and uses traefik as reverse proxy and ssl terminator
 
 Copy `.env.sample` to `.env` in root directory and fill all variables with values such as your mintos.com login, 

@@ -49,7 +49,9 @@ services:
     restart: always
     volumes:
       - ./config/php/php.ini:/usr/local/etc/php/php.ini
+      - ./config/php/start.sh:/start.sh
       - ./src/api:/var/www/html
+    entrypoint: ['bash', '/start.sh']
     networks:
       - default
 
