@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form @submit.prevent="submit" >
+        <form @submit.prevent="submit">
             <input type="email" name="email" v-model="email" placeholder="email">
             <input type="password" name="password" v-model="password" placeholder="password">
             <button type="submit">Submit</button>
@@ -18,16 +18,15 @@
             }
         },
         methods: {
-            submit () {
+            /**
+             * Submit login
+             */
+            submit() {
                 this.axios.post(`/api/login`, {email: this.email, password: this.password})
                     .then((response) => {
                         localStorage.setItem('token', response.data.api_token);
                         this.$router.push('/');
                     })
-                    .catch(() => {
-                    })
-                    .then(() => {
-                    });
             }
         }
     }

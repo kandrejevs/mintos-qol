@@ -169,6 +169,9 @@
             this.fetchData();
         },
         methods: {
+            /**
+             * fetch data from api
+             */
             fetchData() {
                 this.axios
                     .get(`/api/data`)

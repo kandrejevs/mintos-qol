@@ -1,3 +1,7 @@
+/**
+ * cron script that logs into mintos.com and scrapes data from dashboard, then sends it to laravel api utilising puppeteer
+ */
+
 const puppeteer = require('puppeteer');
 const cron = require('node-cron');
 const axios = require('axios');

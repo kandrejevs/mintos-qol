@@ -6,6 +6,10 @@ use App\Balance;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
+/**
+ * Class DataController
+ * @package App\Http\Controllers
+ */
 class DataController extends Controller
 {
     /**

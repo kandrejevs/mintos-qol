@@ -5,6 +5,10 @@ namespace App;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Balance
+ * @package App
+ */
 class Balance extends Model
 {
     protected $fillable = [
@@ -64,7 +68,7 @@ class Balance extends Model
     }
 
     /**
-     * get last update in human readable form
+     * get last update in human readable format
      * @return string
      */
     public function getLastUpdateAttribute()
