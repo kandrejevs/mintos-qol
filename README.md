@@ -12,6 +12,8 @@ app via POST request. Vue.js PWA app then uses laravel as data source and it can
 native app. Sessions persist much longer, so you are able to just click icon on your phone screen and quickly see how 
 your portfolio is doing.
 
+![](https://i.imgur.com/gR62ANB.gif)
+
 ## Installation
 The whole application is dockerized and uses traefik as reverse proxy and ssl terminator
 
