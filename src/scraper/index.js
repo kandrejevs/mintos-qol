@@ -49,14 +49,9 @@ async function fetch() {
     });
 
     axios.post(`http://nginx/api/balances?api_token=${process.env.USER_API_TOKEN}`, data)
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+        .then(function (response) {})
+        .catch(function (error) {});
 
-    console.log(data);
     await browser.close();
 }
 
