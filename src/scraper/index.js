@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
 const cron = require('node-cron');
 const axios = require('axios');
 
-cron.schedule('*/15 * * * *', () => {
+cron.schedule('*/30 * * * *', () => {
     fetch();
 });
 
