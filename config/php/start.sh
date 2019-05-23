@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /var/www/html
+composer global require hirak/prestissimo
 
 if [[ $APP_ENV = "local" ]]; then
     echo "local environment"
