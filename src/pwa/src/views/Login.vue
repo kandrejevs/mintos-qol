@@ -1,11 +1,34 @@
 <template>
-    <div class="login">
-        <form @submit.prevent="submit">
-            <input type="email" name="email" v-model="email" placeholder="email">
-            <input type="password" name="password" v-model="password" placeholder="password">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <form @submit.prevent="submit">
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input type="email" name="email" v-model="email" placeholder="email" class="input">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control">
+                                <input type="password" name="password" v-model="password" placeholder="password" class="input">
+                            </div>
+                        </div>
+
+
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="button is-primary">Submit</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -32,11 +55,6 @@
     }
 </script>
 
-<style scoped>
-    input,
-    button {
-        width: 100%;
-        padding: 10px;
-        margin: 0 0 15px 0;
-    }
+<style scoped lang="scss">
+
 </style>
