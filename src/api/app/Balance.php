@@ -88,4 +88,34 @@ class Balance extends Model
         return number_format($first->total_profit - $last->total_profit, 2);
     }
 
+    /**
+     * Gather data for rendering daily profit chart
+     * @return array
+     */
+    public function getLastMonthProfitByDay()
+    {
+        $records = self::where('created_at', '>', Carbon::now()->subMonth())->orderBy('created_at', 'asc')->get();
+
+        $groupedByDay = $records->groupBy(function ($item) {
+            return $item->created_at->format('d-M-y');
+        });
+
+        $data = [];
+        foreach ($groupedByDay as $date => $day) {
+            $data[$date] = (float) number_format($day->max('total_profit') - $day->min('total_profit'), 2);
+        }
+
+        return [
+            'labels' => array_keys($data),
+            'datasets' => [
+                [
+                    'label' => 'Daily earnings',
+                    'data' => array_values($data),
+                    'fill' => false,
+                    'borderColor' => 'rgba(0, 0, 0, 1)',
+                ],
+            ]
+        ];
+    }
+
 }

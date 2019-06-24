@@ -28,7 +28,8 @@ class DataController extends Controller
                 'last_month' => $balanceInstance->getProfitFromLastMonth(),
                 'last_year' => $balanceInstance->getProfitFromLastYear(),
             ],
-            'last_update' => $latestBalance->last_update
+            'daily_profits' => $balanceInstance->getLastMonthProfitByDay(),
+            'last_update' => $latestBalance->last_update,
         ];
 
         return $data;

@@ -180,6 +180,12 @@
 
                 <div class="columns">
                     <div class="column">
+                        <Chart :chartdata="data.daily_profits" ></Chart>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <div class="column">
                         <p>Last update: {{ data.last_update }}</p>
                         <button @click="fetchData" class="button is-primary">Refresh</button>
                     </div>
@@ -195,11 +201,14 @@
 </template>
 
 <script>
+    import Chart from "../components/Chart";
+
     export default {
         name: "Data",
+        components: { Chart },
         data: function () {
             return {
-                data: {}
+                data: {},
             }
         },
         mounted: function () {

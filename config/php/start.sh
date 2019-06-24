@@ -10,7 +10,7 @@ if [[ $APP_ENV = "local" ]]; then
 fi
 
 if [[ $APP_ENV = "production" ]]; then
-    echo "local environment"
+    echo "production environment"
     composer install --optimize-autoloader --no-dev
     php artisan migrate --force
     php artisan config:cache
