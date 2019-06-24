@@ -24,7 +24,7 @@ class DataController extends Controller
             'latest' => $latestBalance,
             'total_profits' => [
                 'last_day' => $balanceInstance->getProfitFromLastDay(),
-                'last_week' => $balanceInstance->getProfitFromLastMonth(),
+                'last_week' => $balanceInstance->getProfitFromLastWeek(),
                 'last_month' => $balanceInstance->getProfitFromLastMonth(),
                 'last_year' => $balanceInstance->getProfitFromLastYear(),
             ],
