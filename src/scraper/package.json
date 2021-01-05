@@ -9,7 +9,7 @@
   "author": "kandrejevs",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "index.js": "0.0.3",
     "node": "^11.10.0",
     "node-cron": "^2.0.3",
